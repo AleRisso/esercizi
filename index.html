@@ -59,6 +59,8 @@
         <button id="fire" class="btn" onclick="prendiilcolore()">Fire</button>
         <div id="scoreContainer">
             Tentativi rimanenti: <p id="tent">10</p>
+            Tempo che ci stai impiegando:<p id="click"></p>
+            
         </div>
 
 
@@ -104,7 +106,7 @@
                 if (tentativi > 0) {
                     tempoDifferenza = Date.now() - prendoiltempo;
                     arraytempiclick.push(tempoDifferenza);
-                    document.getElementById("click").innerText = tempoDifferenza;
+                    document.getElementById("click").innerText+= tempoDifferenza+ ",";
                     document.getElementById('tent').innerHTML = tentativi;
                 }
             }
